@@ -82,4 +82,12 @@
 
 
   <!-- Socials icons end -->
+
+
+  <g id="ExtraSkillsIcon">
+    <rect x="0.5" y="0.5" width="9" height="9" stroke="#FFB400"/>
+    <rect x="5.5" y="5.5" width="9" height="9" stroke="#FFB400"/>
+    <rect x="0.5" y="0.5" width="9" height="9" stroke="#FFB400"/>
+    <rect x="5.5" y="5.5" width="9" height="9" stroke="#FFB400"/>
+  </g>
   </svg>
