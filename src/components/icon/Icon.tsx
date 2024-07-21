@@ -1,6 +1,6 @@
 import React from 'react';
 
-import IconsSprite from './../images/icons/sprite.svg';
+import IconsSprite from '../../assets/icons/sprite.svg';
 
 type IconPropsType = {
   width?: string;

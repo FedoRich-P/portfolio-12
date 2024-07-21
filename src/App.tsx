@@ -1,5 +1,5 @@
 import './App.css';
-import { Sitebar } from './components/sitebar/Sitebar';
+import { Sitebar } from './layout/sitebar/Sitebar';
 import { Icon } from './components/icon/Icon';
 import styled from 'styled-components';
 

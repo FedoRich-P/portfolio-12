@@ -1,7 +1,8 @@
 import React from 'react';
-import { Socials } from '../socials/Socials';
+import { Socials } from '../../components/socials/Socials';
 import styled from 'styled-components';
-import Src from '../images/images/sidebar-foto.jpg';
+import Src from '../../assets/images/sidebar-foto.jpg';
+import { FlexWrapper } from '../../components/flex/FlexWrapper';
 
 const socialIconsArray = [
   'facebook',
@@ -14,22 +15,23 @@ const socialIconsArray = [
 
 export function SitebarCard() {
   return (
-    <>
+    <FlexWrapper as={SidebarWrapper} $wrap="wrap">
       <ImageBox>
         <Image src={Src}></Image>
       </ImageBox>
       <Name>Rayan Adlardard</Name>
       <CardText>Font-end Developer</CardText>
       <Socials iconsArray={socialIconsArray}></Socials>
-    </>
+    </FlexWrapper>
   );
 }
+
+const SidebarWrapper = styled.div``;
 
 const ImageBox = styled.div`
   position: relative;
   width: 150px;
   height: 150px;
-  /* overflow: hidden; */
 
   &::after {
     content: '';
@@ -44,8 +46,6 @@ const ImageBox = styled.div`
 `;
 
 const Image = styled.img`
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   object-position: 0px -10px;
   border-radius: 100%;

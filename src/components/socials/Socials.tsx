@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { Icon } from '../icon/Icon';
+import { FlexWrapper } from '../flex/FlexWrapper';
+import { myTheme } from '../theme/Theme.staled';
 
 type SocialsPropsType = {
   iconsArray: Array<string>;
@@ -8,48 +10,31 @@ type SocialsPropsType = {
 export function Socials(props: SocialsPropsType) {
   const socialArray = props.iconsArray.map((element, i) => {
     return (
-      <SocialListItems key={i}>
-        <SocialListLink>
-          <Icon iconId={element}></Icon>
-        </SocialListLink>
-      </SocialListItems>
+      <FlexWrapper as={SocialListItems} key={i}>
+        <FlexWrapper as={SocialListLink}>
+          <Icon
+            iconId={element}
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+          ></Icon>
+        </FlexWrapper>
+      </FlexWrapper>
     );
   });
 
-  return <SocialList>{socialArray}</SocialList>;
+  return (
+    <FlexWrapper as={SocialList} $columngap="15px">
+      {socialArray}
+    </FlexWrapper>
+  );
 }
 
-const SocialList = styled.ul`
-  display: flex;
-  column-gap: 15px;
-`;
+const SocialList = styled.ul``;
 const SocialListItems = styled.li`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 24px;
   height: 24px;
   border-radius: 100%;
-  background-color: rgba(255, 180, 0, 1);
+  background-color: ${myTheme.colors.main};
 `;
-const SocialListLink = styled.a`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-// return (
-//   <>
-//     {socialIconsArray.map((element, i) => {
-//       return (
-//         <SocialList>
-//           <SocialListItems key={i}>
-//             <SocialListLink>
-//               <Icon iconId={element}></Icon>
-//             </SocialListLink>
-//           </SocialListItems>
-//         </SocialList>
-//       );
-//     })}
-//     ;
-//   </>)
+const SocialListLink = styled.a``;
