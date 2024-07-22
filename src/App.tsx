@@ -3,6 +3,7 @@ import { Sitebar } from './layout/sitebar/Sitebar';
 import { Icon } from './components/icon/Icon';
 import styled from 'styled-components';
 import { Main } from './layout/main/Main';
+import { Services } from './layout/sections/services/Services';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Sitebar></Sitebar>
         <Main></Main>
       </MainSection>
+      <Services></Services>
     </div>
   );
 }

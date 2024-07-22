@@ -15,7 +15,7 @@ const socialIconsArray = [
 
 export function SitebarCard() {
   return (
-    <FlexWrapper as={SidebarWrapper} $wrap="wrap">
+    <FlexWrapper as={SidebarWrapper} $wrap="wrap" $mb="50px">
       <ImageBox>
         <Image src={Src}></Image>
       </ImageBox>

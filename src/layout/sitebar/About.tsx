@@ -16,7 +16,7 @@ export function About(props: AboutPropsType) {
   );
 }
 
-const AboutBox = styled.div`
+const AboutBox = styled.li`
   width: 100%;
   font-family: Inter;
   color: ${myTheme.colors.black};

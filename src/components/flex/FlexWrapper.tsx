@@ -10,6 +10,7 @@ type FlexWrapperPropsType = {
   $columngap?: string;
   $rowgap?: string;
   $flex?: string;
+  $mb?: string;
 };
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
@@ -22,4 +23,5 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
   column-gap: ${(props) => props.$columngap};
   row-gap: ${(props) => props.$rowgap};
   flex: ${(props) => props.$flex};
+  margin-bottom: ${(props) => props.$mb};
 `;

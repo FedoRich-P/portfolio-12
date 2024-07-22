@@ -11,7 +11,12 @@ type ProgressPropsType = {
 
 export function Progress(props: ProgressPropsType) {
   return (
-    <FlexWrapper $wrap="wrap" $justify="space-between" $flex="0 1 100%">
+    <FlexWrapper
+      as={ProgressWrapper}
+      $wrap="wrap"
+      $justify="space-between"
+      $flex="0 1 100%"
+    >
       <MainText as={ProgressTitle}>{props.title}</MainText>
       <MainText>{props.value}</MainText>
       <ProgressLine width={props.value}></ProgressLine>
@@ -22,6 +27,8 @@ export function Progress(props: ProgressPropsType) {
 type ProgressLinePropsType = {
   width: string;
 };
+
+const ProgressWrapper = styled.li``;
 
 const ProgressTitle = styled.h4`
   max-width: 50%;

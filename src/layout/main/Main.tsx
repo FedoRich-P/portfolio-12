@@ -28,6 +28,7 @@ export function Main() {
 }
 
 const MainWrapper = styled.main`
+  margin-bottom: 137px;
   display: flex;
   align-items: flex-start;
   column-gap: 27px;

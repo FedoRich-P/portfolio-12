@@ -20,29 +20,40 @@ const AboutList = {
 export function Sitebar() {
   return (
     <>
-      <FlexWrapper as={Aside} $wrap="wrap" $rowgap="50px" $flex="0 1 305px">
+      <FlexWrapper as={Aside} $wrap="wrap" $flex="0 1 305px">
         <SitebarCard></SitebarCard>
-        <FlexWrapper $direction="column" $rowgap="10px" $flex="0 1 100%">
+        <FlexWrapper
+          as={SitebarWrapper}
+          $direction="column"
+          $rowgap="10px"
+          $flex="0 1 100%"
+          $mb="50px"
+        >
           {Object.entries(AboutList).map((el, i) => {
             return <About name={el[0]} value={el[1]} key={i}></About>;
           })}
         </FlexWrapper>
-        <FlexWrapper $wrap="wrap" $rowgap="10px">
-          <SectionSubTitle>Languages </SectionSubTitle>
+        <SectionSubTitle>Languages </SectionSubTitle>
+        <FlexWrapper as={SitebarWrapper} $wrap="wrap" $rowgap="10px" $mb="50px">
           <Progress title="Bangla" value="100%"></Progress>
           <Progress title="English" value="80% "></Progress>
           <Progress title="Spanish" value="60% "></Progress>
         </FlexWrapper>
-        <FlexWrapper $wrap="wrap" $rowgap="10px">
-          <SectionSubTitle>Skills </SectionSubTitle>
+        <SectionSubTitle>Skills </SectionSubTitle>
+        <FlexWrapper as={SitebarWrapper} $wrap="wrap" $rowgap="10px" $mb="50px">
           <Progress title="Html" value="90%"></Progress>
           <Progress title="CSS" value="85%"></Progress>
           <Progress title="Js" value="80%"></Progress>
           <Progress title="PHP" value="75%"></Progress>
           <Progress title="WordPress" value="85%"></Progress>
         </FlexWrapper>
-        <FlexWrapper $wrap="wrap" $justify="flex-start">
-          <SectionSubTitle>Extra Skills</SectionSubTitle>
+        <SectionSubTitle>Extra Skills</SectionSubTitle>
+        <FlexWrapper
+          as={SitebarWrapper}
+          $wrap="wrap"
+          $justify="flex-start"
+          $mb="50px"
+        >
           <MainText as={ExtraSkillsTitle}>Bootstrap, Materialize</MainText>
           <MainText as={ExtraSkillsTitle}>Stylus, Sass, Less</MainText>
           <MainText as={ExtraSkillsTitle}>Gulp, Webpack, Grunt</MainText>
@@ -53,20 +64,16 @@ export function Sitebar() {
     </>
   );
 }
+
+const SitebarWrapper = styled.ul``;
+
 const Aside = styled.aside`
-  /* position: fixed;
-  width: 305px;
-  top: 0;
-  left: 0; */
   padding: 50px 46px 25px 40px;
 `;
 
-const ExtraSkillsTitle = styled.h4`
+const ExtraSkillsTitle = styled.li`
   position: relative;
   padding-left: 30px;
-  /* background-image: url(${PsevdoIcon});
-  background-position: 0 4px;
-  background-size: cover; */
 
   &::before {
     content: '';

@@ -13,7 +13,7 @@ export const GlobalStyled = createGlobalStyle`
     text-decoration: none;
   }
 
-  ol, ul {
+  ol, ul, li {
     list-style: none;
   }
 
